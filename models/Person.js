@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const { uniq, uniqueId } = require("lodash");
 
 //define the person schema
 const personSchema = new mongoose.Schema({
@@ -22,7 +23,7 @@ const personSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    uniq: true,
+    unique: true,
   },
   address: {
     type: String,

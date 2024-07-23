@@ -27,7 +27,7 @@ app.get("/", function (req, res) {
 });
 
 //use the routers
-app.use("/person", localAuthMiddleware, personRoutes);
+app.use("/person", personRoutes);
 
 //use the router
 app.use("/menu", menuRoutes);
